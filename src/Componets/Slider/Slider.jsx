@@ -11,7 +11,6 @@ export const Slider = () => {
   return (
     <>
       <Swiper
-        effect={"fade"}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -21,7 +20,8 @@ export const Slider = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Autoplay, Pagination]}
+        navigation={true}
+        modules={[Autoplay, Pagination, EffectFade]}
         className="mySwiper"
       >
         <SwiperSlide>Slide 1</SwiperSlide>
