@@ -9,8 +9,8 @@ export default {
       primary: "EB Garamond, Arial, sans-serif",
     },
     colors: {
-      first: "#61b22a",
-      second: "#04a5e5",
+      second: "#61b22a",
+      first: "#04a5e5",
       third: "#436971",
     },
   },

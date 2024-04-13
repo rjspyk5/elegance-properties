@@ -5,9 +5,13 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 
 import { routes } from "./Routing/Routes.jsx";
+import { Provider } from "./Provider/Provider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={routes} />
+    <Provider>
+      {" "}
+      <RouterProvider router={routes} />
+    </Provider>
   </React.StrictMode>
 );

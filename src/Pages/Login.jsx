@@ -5,9 +5,9 @@ import { FaGithub } from "react-icons/fa";
 export const Login = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col">
-        <div className="card shrink-0 w-80 md:w-[500px] shadow-2xl  bg-base-100">
-          <form className="card-body w-full">
+      <div className="hero-content flex-col w-full">
+        <div className="card shrink-0 w-full md:w-[500px]  shadow-2xl  bg-base-100">
+          <form className="card-body w-full ">
             <h1 className="text-4xl font-bold text-first text-center">
               Login Form
             </h1>
@@ -46,8 +46,12 @@ export const Login = () => {
               <FaGithub size={30} />
             </button>
           </div>
-          <p className="my-5 text-center">
-            New here? <Link to="/register">Register Now</Link>
+          <hr className="text-[#343B4C] my-5" />
+          <p className="mb-5 text-center">
+            New here?{" "}
+            <Link className="text-second underline" to="/register">
+              Register Now
+            </Link>
           </p>
         </div>
       </div>
