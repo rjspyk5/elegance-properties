@@ -1,13 +1,42 @@
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/Provider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Login = () => {
+  const { setuser, logIn } = useContext(AuthContext);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const pass = form.get("password");
+    logIn(email, pass)
+      .then((res) => console.log(res.user))
+      .catch((err) => errorToast(err));
+  };
+
+  const successToast = (typee, msz) => toast.success(msz);
+  const errorToast = (msz) => toast.error(`${msz}`);
   return (
     <div className="hero min-h-screen bg-base-200">
+      <ToastContainer
+        position="top-center"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <div className="hero-content flex-col w-full">
         <div className="card shrink-0 w-full md:w-[500px]  shadow-2xl  bg-base-100">
-          <form className="card-body w-full ">
+          <form className="card-body w-full " onSubmit={handleSubmit}>
             <h1 className="text-4xl font-bold text-first text-center">
               Login Form
             </h1>
@@ -16,6 +45,7 @@ export const Login = () => {
                 <span className="label-text">Email</span>
               </label>
               <input
+                name="email"
                 type="email"
                 placeholder="Email"
                 className="input input-bordered"
@@ -27,6 +57,7 @@ export const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
+                name="password"
                 type="password"
                 placeholder="Password"
                 className="input input-bordered"
