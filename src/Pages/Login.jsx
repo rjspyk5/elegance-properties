@@ -15,7 +15,11 @@ export const Login = () => {
     const pass = form.get("password");
     logIn(email, pass)
       .then((res) => console.log(res.user))
-      .catch((err) => errorToast(err));
+      .catch((err) => {
+        err == "FirebaseError: Firebase: Error (auth/invalid-credential)."
+          ? errorToast("Invalid username or password")
+          : errorToast(err);
+      });
   };
 
   const successToast = (typee, msz) => toast.success(msz);

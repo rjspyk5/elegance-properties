@@ -69,10 +69,16 @@ export const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="flex items-center gap-2">
-              <div className="tooltip  tooltip-left" data-tip="hello">
+              <div
+                className="tooltip  tooltip-left"
+                data-tip={`${
+                  user?.displayName ? user.displayName : "Annonymus"
+                }`}
+              >
                 <img
                   className="w-10 rounded-full avatar"
                   src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  alt="not available"
                 />
               </div>
 
