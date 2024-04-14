@@ -1,0 +1,113 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "estate_title": "Oceanfront Paradise Villa",
+        "segment_name": "Villas",
+        "description": "Experience paradise in this luxurious oceanfront villa. With breathtaking views, private beach access, and exquisite design, this villa offers the ultimate coastal retreat.",
+        "price": "$12,500,000",
+        "status": "sale",
+        "area": "8,000 sq ft",
+        "location": "Tropical Haven Bay",
+        "facilities": ["Infinity pool", "Private cinema", "Gourmet kitchen"],
+        "image": "oceanfront_villa.jpg"
+      },
+      {
+        "id": 2,
+        "estate_title": "Skyline Luxury Penthouse",
+        "segment_name": "Penthouse",
+        "description": "Live above it all in this stunning luxury penthouse. With unparalleled views of the city skyline, spacious interiors, and top-of-the-line amenities, this penthouse defines urban opulence.",
+        "price": "$7,800,000",
+        "status": "sale",
+        "area": "5,000 sq ft",
+        "location": "Metropolis Heights",
+        "facilities": ["Private rooftop terrace", "Home automation system", "Spa-like bathroom"],
+        "image": "skyline_penthouse.jpg"
+      },
+      {
+        "id": 3,
+        "estate_title": "Exclusive Island Oasis",
+        "segment_name": "Private Islands",
+        "description": "Escape to your own private oasis with this exclusive island retreat. Surrounded by turquoise waters and lush greenery, this island offers seclusion, luxury, and unparalleled natural beauty.",
+        "price": "$20,000,000",
+        "status": "sale",
+        "area": "25 acres",
+        "location": "Tropical Archipelago",
+        "facilities": ["Beachfront villa", "Yacht dock", "Helipad"],
+        "image": "island_oasis.jpg"
+      },
+      {
+        "id": 4,
+        "estate_title": "Luxury Beachfront Resort",
+        "segment_name": "Resorts",
+        "description": "Indulge in luxury at this beachfront resort. With world-class amenities, pristine beaches, and exceptional service, this resort offers an unforgettable experience for discerning travelers.",
+        "price": "$35,000,000",
+        "status": "sale",
+        "area": "60 acres",
+        "location": "Exotic Coastal Destination",
+        "facilities": ["Spa & wellness center", "Private villas", "Fine dining restaurants"],
+        "image": "beachfront_resort.jpg"
+      },
+      {
+        "id": 5,
+        "estate_title": "Grand Coastal Mansion",
+        "segment_name": "Mansions",
+        "description": "Step into luxury with this grand coastal mansion. Featuring opulent interiors, sprawling grounds, and stunning ocean views, this mansion is the epitome of refined living.",
+        "price": "$30,000,000",
+        "status": "sale",
+        "area": "15,000 sq ft",
+        "location": "Cliffside Estates",
+        "facilities": ["Private theater", "Infinity pool", "Tennis court"],
+        "image": "coastal_mansion.jpg"
+      },
+      {
+        "id": 6,
+        "estate_title": "Seaside Retreat Villa",
+        "segment_name": "Villas",
+        "description": "Escape to this serene seaside retreat villa. Nestled among palm trees and overlooking the ocean, this villa offers tranquility, luxury, and unmatched coastal living.",
+        "price": "$9,500,000",
+        "status": "sale",
+        "area": "6,500 sq ft",
+        "location": "Sunset Beach",
+        "facilities": ["Private pool", "Outdoor dining area", "Home gym"],
+        "image": "seaside_villa.jpg"
+      },
+      {
+        "id": 7,
+        "estate_title": "Luxury Mountain Chalet",
+        "segment_name": "Chalet",
+        "description": "Experience luxury in the mountains with this stunning chalet. Featuring rustic charm, modern amenities, and panoramic views, this chalet offers the perfect alpine retreat.",
+        "price": "$4,500,000",
+        "status": "sale",
+        "area": "3,000 sq ft",
+        "location": "Alpine Wonderland",
+        "facilities": ["Stone fireplace", "Hot tub", "Ski-in/ski-out access"],
+        "image": "mountain_chalet.jpg"
+      },
+      {
+        "id": 8,
+        "estate_title": "Exclusive Lakeside Estate",
+        "segment_name": "Estates",
+        "description": "Own a piece of paradise with this exclusive lakeside estate. With panoramic lake views, luxurious amenities, and sprawling grounds, this estate offers the ultimate retreat.",
+        "price": "$18,000,000",
+        "status": "sale",
+        "area": "10,000 sq ft",
+        "location": "Tranquil Lakeside",
+        "facilities": ["Boat dock", "Outdoor kitchen", "Home theater"],
+        "image": "lakeside_estate.jpg"
+      },
+      {
+        "id": 9,
+        "estate_title": "Tropical Paradise Resort",
+        "segment_name": "Resorts",
+        "description": "Experience paradise at this luxurious tropical resort. Set amidst lush gardens and overlooking turquoise waters, this resort offers world-class amenities, impeccable service, and endless relaxation.",
+        "price": "$40,000,000",
+        "status": "sale",
+        "area": "80 acres",
+        "location": "Exotic Island Destination",
+        "facilities": ["Spa & wellness center", "Private villas", "Gourmet dining"],
+        "image": "tropical_resort.jpg"
+      }
+    ]
+  }
+  
