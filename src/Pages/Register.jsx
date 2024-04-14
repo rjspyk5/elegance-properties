@@ -15,6 +15,16 @@ export const Register = () => {
     const pass = form.get("password");
     const name = form.get("name");
     const url = form.get("url");
+    if (!/[a-z]/.test(pass) || !/[A-Z]/.test(pass)) {
+      errorToast(
+        "Must have atleast one Uppercase and one lowecase letter in the password"
+      );
+      return;
+    }
+    if (pass.length < 6) {
+      errorToast("password length must be at least 6 character");
+      return;
+    }
 
     signUp(email, pass)
       .then((res) => {
@@ -25,7 +35,7 @@ export const Register = () => {
       .catch((err) => errorToast(err));
   };
 
-  const successToast = (typee, msz) => toast.success(msz);
+  const successToast = (msz) => toast.success(msz);
   const errorToast = (msz) => toast.error(`${msz}`);
 
   return (
@@ -98,15 +108,7 @@ export const Register = () => {
               <button className="btn bg-first">Register</button>
             </div>
           </form>
-          <legend className="text-center">Or register with</legend>
-          <div className="flex items-center justify-center gap-5 my-2">
-            <button className="flex items-center ">
-              <FcGoogle size={30} />
-            </button>
-            <button className="flex items-center ">
-              <FaGithub size={30} />
-            </button>
-          </div>
+
           <hr className="text-[#343B4C] my-5" />
           <p className="mb-5 text-center">
             Already have an account ?{" "}

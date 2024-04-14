@@ -7,14 +7,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const Login = () => {
-  const { setuser, logIn } = useContext(AuthContext);
+  const { setuser, logIn, googleSignUp } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const pass = form.get("password");
     logIn(email, pass)
-      .then((res) => console.log(res.user))
+      .then((res) => successToast("Successfully login"))
       .catch((err) => {
         err == "FirebaseError: Firebase: Error (auth/invalid-credential)."
           ? errorToast("Invalid username or password")
@@ -22,7 +22,7 @@ export const Login = () => {
       });
   };
 
-  const successToast = (typee, msz) => toast.success(msz);
+  const successToast = (msz) => toast.success(msz);
   const errorToast = (msz) => toast.error(`${msz}`);
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -74,7 +74,14 @@ export const Login = () => {
           </form>
           <legend className="text-center">Or login with</legend>
           <div className="flex items-center justify-center gap-5 my-2">
-            <button className="flex items-center ">
+            <button
+              onClick={() =>
+                googleSignUp()
+                  .then()
+                  .catch((err) => errorToast(err))
+              }
+              className="flex items-center "
+            >
               <FcGoogle size={30} />
             </button>
             <button className="flex items-center ">
