@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
@@ -8,13 +8,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 export const Login = () => {
   const { setuser, logIn, googleSignUp } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const pass = form.get("password");
     logIn(email, pass)
-      .then((res) => successToast("Successfully login"))
+      .then(() => {
+        successToast("Successfully login");
+        navigate(location?.state ? location.state : "/");
+      })
       .catch((err) => {
         err == "FirebaseError: Firebase: Error (auth/invalid-credential)."
           ? errorToast("Invalid username or password")

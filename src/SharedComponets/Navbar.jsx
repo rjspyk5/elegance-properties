@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/Provider";
 
 export const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+
   const menu = (
     <>
       <li>
