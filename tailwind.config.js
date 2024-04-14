@@ -10,7 +10,7 @@ export default {
     },
     colors: {
       second: "#61b22a",
-      first: "#04a5e5",
+      first: "#0095FE",
       third: "#436971",
     },
   },

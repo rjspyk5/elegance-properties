@@ -6,6 +6,7 @@ import { Login } from "../Pages/Login";
 import { Register } from "../Pages/Register";
 import { PrivateRoute } from "../Layout/PrivateRoute";
 import { UpdateProfile } from "../Pages/UpdateProfile";
+import { Profile } from "../Pages/Profile";
 
 export const routes = createBrowserRouter([
   {
@@ -17,10 +18,10 @@ export const routes = createBrowserRouter([
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
       {
-        path: "/updateprofile",
+        path: "/viewprofile",
         element: (
           <PrivateRoute>
-            <UpdateProfile />
+            <Profile />
           </PrivateRoute>
         ),
       },

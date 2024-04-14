@@ -15,14 +15,16 @@ export const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/updateprofile"
-          className={({ isActive }) => (isActive ? "bg-first" : "")}
-        >
-          Update Profile
-        </NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink
+            to="/updateprofile"
+            className={({ isActive }) => (isActive ? "bg-first" : "")}
+          >
+            Update Profile
+          </NavLink>
+        </li>
+      )}
       <li>
         <NavLink
           to="/viewprofile"
