@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
 
 export const Login = () => {
   const { setuser, logIn, googleSignUp } = useContext(AuthContext);
@@ -18,7 +19,10 @@ export const Login = () => {
     const pass = form.get("password");
     logIn(email, pass)
       .then(() => {
-        successToast("Successfully login");
+        Swal.fire({
+          text: "You've successfully login",
+          icon: "success",
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
@@ -83,7 +87,10 @@ export const Login = () => {
             <button
               onClick={() =>
                 googleSignUp()
-                  .then()
+                  .then(() => {
+                    successToast("Successfully login");
+                    navigate(location?.state ? location.state : "/");
+                  })
                   .catch((err) => errorToast(err))
               }
               className="flex items-center "

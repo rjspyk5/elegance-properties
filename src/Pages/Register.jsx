@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
 
 export const Register = () => {
   const { user, setuser, signUp } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -30,7 +33,11 @@ export const Register = () => {
       .then((res) => {
         res.user.displayName = name;
         res.user.photoURL = url;
-        successToast("User has been created successfully");
+        navigate("/");
+        Swal.fire({
+          text: "Registration successfull",
+          icon: "success",
+        });
       })
       .catch((err) => errorToast(err));
   };
