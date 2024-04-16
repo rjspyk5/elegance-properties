@@ -1,16 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 export const Register = () => {
-  const { user, setuser, signUp } = useContext(AuthContext);
+  const { signUp } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  const [showPass, setshowPass] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -102,17 +103,23 @@ export const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
                 name="password"
-                type="password"
+                type={showPass ? "text" : "password"}
                 placeholder="Password"
                 className="input input-bordered"
                 required
               />
+              <span
+                className="absolute right-3 top-12"
+                onClick={() => setshowPass(!showPass)}
+              >
+                {showPass ? <IoMdEye /> : <IoMdEyeOff />}
+              </span>
             </div>
             <div className="form-control mt-6">
               <button className="btn bg-first">Register</button>
