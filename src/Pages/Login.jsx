@@ -6,6 +6,7 @@ import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 export const Login = () => {
   const { setuser, logIn, googleSignUp } = useContext(AuthContext);
@@ -36,6 +37,9 @@ export const Login = () => {
   const errorToast = (msz) => toast.error(`${msz}`);
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>Elegance | Login</title>
+      </Helmet>
       <ToastContainer
         position="top-center"
         autoClose={2500}

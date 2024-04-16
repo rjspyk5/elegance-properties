@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
+
 import { useContext } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 export const Register = () => {
   const { user, setuser, signUp } = useContext(AuthContext);
@@ -47,6 +47,9 @@ export const Register = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>Elegance | Register</title>
+      </Helmet>
       <ToastContainer
         position="top-center"
         autoClose={2500}

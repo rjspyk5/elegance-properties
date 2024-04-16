@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 export const EstateDetails = () => {
@@ -7,6 +8,9 @@ export const EstateDetails = () => {
   const estate = data.find((el) => el.id === parseInt(id));
   return (
     <div className="card border border-r-second">
+      <Helmet>
+        <title>Elegance | EstateDetails</title>
+      </Helmet>
       <figure>
         <img src={estate.image} alt="car!" />
       </figure>
