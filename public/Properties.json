@@ -10,7 +10,7 @@
         "area": "8,000 sq ft",
         "location": "Tropical Haven Bay",
         "facilities": ["Infinity pool", "Private cinema", "Gourmet kitchen"],
-        "image": "oceanfront_villa.jpg"
+        "image": "https://i.ibb.co/rxGkttP/ocean-front-vila.webp"
       },
       {
         "id": 2,
@@ -22,7 +22,7 @@
         "area": "5,000 sq ft",
         "location": "Metropolis Heights",
         "facilities": ["Private rooftop terrace", "Home automation system", "Spa-like bathroom"],
-        "image": "skyline_penthouse.jpg"
+        "image": "https://i.ibb.co/8mbLj7H/skyline-peanthhouse.jpg"
       },
       {
         "id": 3,
@@ -34,7 +34,7 @@
         "area": "25 acres",
         "location": "Tropical Archipelago",
         "facilities": ["Beachfront villa", "Yacht dock", "Helipad"],
-        "image": "island_oasis.jpg"
+        "image": "https://i.ibb.co/yRwpcVb/island.jpg"
       },
       {
         "id": 4,
@@ -46,7 +46,7 @@
         "area": "60 acres",
         "location": "Exotic Coastal Destination",
         "facilities": ["Spa & wellness center", "Private villas", "Fine dining restaurants"],
-        "image": "beachfront_resort.jpg"
+        "image": "https://i.ibb.co/3rBkHmw/beachfront.jpg"
       },
       {
         "id": 5,
@@ -58,7 +58,7 @@
         "area": "15,000 sq ft",
         "location": "Cliffside Estates",
         "facilities": ["Private theater", "Infinity pool", "Tennis court"],
-        "image": "coastal_mansion.jpg"
+        "image": "https://i.ibb.co/PxhVcFN/grand.webp"
       },
       {
         "id": 6,
@@ -70,7 +70,7 @@
         "area": "6,500 sq ft",
         "location": "Sunset Beach",
         "facilities": ["Private pool", "Outdoor dining area", "Home gym"],
-        "image": "seaside_villa.jpg"
+        "image": "https://i.ibb.co/BPRCP4q/seaside-1.jpg"
       },
       {
         "id": 7,
@@ -82,7 +82,7 @@
         "area": "3,000 sq ft",
         "location": "Alpine Wonderland",
         "facilities": ["Stone fireplace", "Hot tub", "Ski-in/ski-out access"],
-        "image": "mountain_chalet.jpg"
+        "image": "https://i.ibb.co/XC7p12k/mountain-1.jpg"
       },
       {
         "id": 8,
@@ -94,7 +94,7 @@
         "area": "10,000 sq ft",
         "location": "Tranquil Lakeside",
         "facilities": ["Boat dock", "Outdoor kitchen", "Home theater"],
-        "image": "lakeside_estate.jpg"
+        "image": "https://i.ibb.co/7rMThH6/leakside.webp"
       },
       {
         "id": 9,
@@ -106,7 +106,7 @@
         "area": "80 acres",
         "location": "Exotic Island Destination",
         "facilities": ["Spa & wellness center", "Private villas", "Gourmet dining"],
-        "image": "tropical_resort.jpg"
+        "image": "https://i.ibb.co/ZhBqh29/tropical.jpg"
       }
     ]
   }
