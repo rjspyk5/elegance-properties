@@ -8,6 +8,7 @@ import { PrivateRoute } from "../Layout/PrivateRoute";
 import { UpdateProfile } from "../Pages/UpdateProfile";
 import { Profile } from "../Pages/Profile";
 import { EstateDetails } from "../Componets/Estates/EstateDetails/EstateDetails";
+import axios from "axios";
 
 export const routes = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ export const routes = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
-      { path: "/estate/:id", element: <EstateDetails /> },
+      {
+        path: "/estate/:id",
+        element: <EstateDetails />,
+        loader: () => axios.get("/Properties.json"),
+      },
       {
         path: "/viewprofile",
         element: (

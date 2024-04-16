@@ -8,7 +8,7 @@ export const Estates = () => {
   useEffect(() => {
     axios.get("/Properties.json").then((res) => setestatesData(res.data));
   }, []);
-  console.log(estatesData);
+
   return (
     <div>
       <SectionHeadings
