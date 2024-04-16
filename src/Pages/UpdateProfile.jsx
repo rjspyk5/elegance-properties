@@ -8,6 +8,7 @@ export const UpdateProfile = () => {
   const { user, setuser } = useContext(AuthContext);
   const [updateName, setupdateName] = useState(user.displayName || "");
   const [updatephotoURL, setupdatephotoURL] = useState(user.photoURL || "");
+  const [updateMail, setupdateMail] = useState(user.email || "");
 
   const update = (e) => {
     e.preventDefault();
@@ -25,7 +26,11 @@ export const UpdateProfile = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content grid grid-cols-1 md:grid-cols-2">
           <div className="text-center flex flex-col justify-center items-center">
-            <img className="rounded-full w-56" src={user.photoURL} alt="" />
+            <img
+              className="rounded-full w-56"
+              src={user.photoURL}
+              alt="Image Not avilable"
+            />
 
             <p className="py-6 font-bold text-2xl">{user.displayName}</p>
             {user.email && (
@@ -63,6 +68,20 @@ export const UpdateProfile = () => {
                     onChange={(e) => setupdatephotoURL(e.target.value)}
                     placeholder="Photo Url"
                     className="input input-bordered"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input
+                    disabled
+                    name="email"
+                    type="email"
+                    value={updateMail}
+                    placeholder="Email"
+                    className="input input-bordered"
+                    required
                   />
                 </div>
 
