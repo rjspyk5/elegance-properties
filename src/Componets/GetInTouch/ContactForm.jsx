@@ -4,12 +4,12 @@ export const ContactForm = () => {
       <form action="">
         <fieldset className=" flex flex-col gap-4 *:w-full *:rounded-md">
           {/* name and email */}
-          <h1 className="text-center">Get in touch</h1>
+
           <div className="flex gap-4 *:rounded-md *:focus:ring-c-sucess">
             <input
               type="text"
               name="Firstname"
-              className="p-2 w-full"
+              className="p-2 w-full "
               placeholder="Enter your firstname"
             />
             <input
