@@ -12,7 +12,7 @@ export const Estates = () => {
   return (
     <div>
       <SectionHeadings
-        heading="Exclusive Properties Showcase"
+        heading="Exclusive Estates"
         subheading="Step into a world of luxury and sophistication with our premier properties collection. From iconic beachfront escapes to secluded island retreats, each estate exudes timeless elegance ,choose the luxury that suits you."
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
