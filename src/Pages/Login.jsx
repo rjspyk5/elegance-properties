@@ -9,7 +9,8 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 
 export const Login = () => {
-  const { setuser, logIn, googleSignUp } = useContext(AuthContext);
+  const { setuser, logIn, googleSignUp, githubSignUp } =
+    useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -92,7 +93,10 @@ export const Login = () => {
               onClick={() =>
                 googleSignUp()
                   .then(() => {
-                    successToast("Successfully login");
+                    Swal.fire({
+                      text: "You've successfully login",
+                      icon: "success",
+                    });
                     navigate(location?.state ? location.state : "/");
                   })
                   .catch((err) => errorToast(err))
@@ -101,7 +105,20 @@ export const Login = () => {
             >
               <FcGoogle size={30} />
             </button>
-            <button className="flex items-center ">
+            <button
+              onClick={() =>
+                githubSignUp()
+                  .then(() => {
+                    Swal.fire({
+                      text: "You've successfully login",
+                      icon: "success",
+                    });
+                    navigate(location?.state ? location.state : "/");
+                  })
+                  .catch((err) => errorToast(err))
+              }
+              className="flex items-center "
+            >
               <FaGithub size={30} />
             </button>
           </div>
