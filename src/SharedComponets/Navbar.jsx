@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/Provider";
 
 export const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, loading } = useContext(AuthContext);
 
   const menu = (
     <>
@@ -88,6 +88,8 @@ export const Navbar = () => {
                 Logout
               </button>
             </div>
+          ) : loading ? (
+            <span className="loading loading-spinner text-info"></span>
           ) : (
             <Link to="/login" className="btn h-10 bg-second  min-h-4">
               Login
