@@ -21,7 +21,11 @@ export const routes = createBrowserRouter([
       { path: "/register", element: <Register /> },
       {
         path: "/estate/:id",
-        element: <EstateDetails />,
+        element: (
+          <PrivateRoute>
+            <EstateDetails />
+          </PrivateRoute>
+        ),
         loader: () => axios.get("/Properties.json"),
       },
       {
