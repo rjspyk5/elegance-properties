@@ -18,7 +18,7 @@ export const Home = () => {
       </div>
 
       <Estates />
-      <Maps />
+
       <FAQ />
 
       <GetInTouch />
