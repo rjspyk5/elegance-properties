@@ -14,6 +14,7 @@ Visit the live site: [Elegance Properties](https://elegance-properties.web.app)
 
 ## Used Packages
 
-- AOS (Animate On Scroll) for scroll animations
-- Animate.css for additional animation effects
-- React Leaflet for interactive maps and location visualization
+- Swiper.js
+- Animate.css
+- React Leaflet
+- AOS
