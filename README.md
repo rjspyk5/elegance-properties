@@ -1,8 +1,19 @@
-# React + Vite
+# Elegance Properties
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Elegance Properties.
 
-Currently, two official plugins are available:
+Visit the live site: [Elegance Properties](https://elegance-properties.web.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features and Characteristics
+
+- Browse and view detailed information about luxury properties including penthouses, beachfront villas, private islands, resorts, and mansions.
+- User authentication system allowing users to register, log in, and log out.
+- User profile management functionality enabling users to update their profile information.
+- Responsive design ensuring optimal viewing experience across all devices.
+- Interactive property listings with high-quality images, detailed descriptions, and key features.
+
+## Used Packages
+
+- AOS (Animate On Scroll) for scroll animations
+- Animate.css for additional animation effects
+- React Leaflet for interactive maps and location visualization
