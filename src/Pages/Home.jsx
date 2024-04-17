@@ -10,7 +10,12 @@ export const Home = () => {
       <Helmet>
         <title>Elegance | Home</title>
       </Helmet>
-      <Slider></Slider>
+      <div className="flex">
+        <div>hellor</div>
+
+        <Slider />
+      </div>
+
       <Estates />
       <FAQ />
 
