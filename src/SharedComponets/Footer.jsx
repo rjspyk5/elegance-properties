@@ -1,7 +1,7 @@
 import logo from "../assets/logo.png";
 export const Footer = () => {
   return (
-    <footer className="footer footer-center p-10">
+    <footer className="footer footer-center py-10 bg-[#ffffff10] backdrop-blur-lg px-4 md:px-7   lg:px-11 mt-8 ">
       <aside>
         <img className="w-24" src={logo} alt="" />
         <p className="font-bold">
