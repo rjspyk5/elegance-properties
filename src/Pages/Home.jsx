@@ -22,9 +22,8 @@ export const Home = () => {
         data-aos="zoom-in"
         data-aos-duration="1000"
         data-aos-easing="ease-in-back"
-        className="flex"
+        className="my-8"
       >
-        <div>hellor</div>
         <Slider />
       </div>
 
