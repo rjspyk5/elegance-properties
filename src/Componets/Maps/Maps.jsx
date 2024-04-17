@@ -5,7 +5,7 @@ export const Maps = () => {
   const positionn = [23.744532, 90.414429];
   return (
     <MapContainer
-      style={{ width: "100%", height: "250px", borderRadius: "10px" }}
+      style={{ width: "100%", height: "302px", borderRadius: "10px" }}
       center={positionn}
       zoom={15}
       maxZoom={20}

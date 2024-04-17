@@ -1,7 +1,7 @@
 export const ContactForm = () => {
   return (
-    <div className="p-6 w-full ">
-      <form action="">
+    <div className="w-full ">
+      <form>
         <fieldset className=" flex flex-col gap-4 *:w-full *:rounded-md">
           {/* name and email */}
 
