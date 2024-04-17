@@ -33,28 +33,28 @@ export const Slider = () => {
       >
         <SwiperSlide>
           <img
-            className="w-[90%] max-h-[500px] mx-auto rounded-xl"
+            className="w-[100%] min-h-[300px] md:min-h-[474px] max-h-[500px] mx-auto rounded-xl"
             src={img1}
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-[90%] max-h-[500px] mx-auto rounded-xl"
+            className="w-[100%] min-h-[300px] md:min-h-[474px] max-h-[500px] mx-auto rounded-xl"
             src={img2}
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-[90%] max-h-[500px] mx-auto rounded-xl"
+            className="w-[100%] min-h-[300px] md:min-h-[474px] max-h-[500px]  rounded-xl"
             src={img3}
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="w-[90%] max-h-[500px] mx-auto rounded-xl"
+            className="w-[100%] min-h-[300px] md:min-h-[474px] max-h-[500px] mx-auto rounded-xl"
             src={img4}
             alt=""
           />

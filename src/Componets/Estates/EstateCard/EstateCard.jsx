@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { IoLocation } from "react-icons/io5";
+import "animate.css";
 
 export const EstateCard = ({
   estate: { id, image, estate_title, price, facilities, location, area },
@@ -12,7 +13,7 @@ export const EstateCard = ({
   };
 
   return (
-    <div className="card hover:scale-[100.8%]  duration-300  bg-[#ffffff10]">
+    <div className="card hover:scale-[100.8%]   duration-300  bg-[#ffffff10]">
       <figure>
         <img src={image} className="h-[290px]" alt="car!" />
       </figure>

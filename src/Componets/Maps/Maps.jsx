@@ -1,5 +1,28 @@
-import React from "react";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 export const Maps = () => {
-  return <div>Maps</div>;
+  const positionn = [23.744532, 90.414429];
+  return (
+    <MapContainer
+      style={{ width: "100%", height: "250px", borderRadius: "10px" }}
+      center={positionn}
+      zoom={15}
+      maxZoom={20}
+      attributionControl={true}
+      zoomControl={true}
+      doubleClickZoom={true}
+      dragging={true}
+      animate={true}
+      easeLinearity={0.35}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker position={positionn}>
+        <Popup>Elegence Properties</Popup>
+      </Marker>
+    </MapContainer>
+  );
 };
