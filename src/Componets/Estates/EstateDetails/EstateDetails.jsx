@@ -30,7 +30,10 @@ export const EstateDetails = () => {
         <p className="flex gap-2 text-[#ffffff77] font-light items-center">
           <IoLocation /> {estate.location}
         </p>
-        <p>Description: {estate.description}</p>
+        <p className="font-bold text-lg">
+          Description:{" "}
+          <span className="font-normal ">{estate.description}</span>
+        </p>
         <div className="flex gap-2 items-center flex-grow">
           <p className="font-bold ">Facilites:</p>
           <div className="flex flex-wrap gap-2">

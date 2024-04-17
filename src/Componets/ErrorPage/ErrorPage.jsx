@@ -12,14 +12,17 @@ export const ErrorPage = () => {
         <title>Elegance | Something went wrong</title>
       </Helmet>
       <Navbar></Navbar>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-      <button className="btn" onClick={() => navigate(-1)}>
-        Go back
-      </button>
+      <div className="min-h-screen">
+        <h1>Oops!</h1>
+        <p>Sorry, an unexpected error has occurred.</p>
+        <p>
+          <i>{error.statusText || error.message}</i>
+        </p>
+        <button className="btn" onClick={() => navigate(-1)}>
+          Go back
+        </button>
+      </div>
+
       <Footer />
     </div>
   );
