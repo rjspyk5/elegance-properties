@@ -24,6 +24,9 @@ export const EstateCard = ({
           {location}
         </p>
         <h2 className="card-title">{estate_title}</h2>
+        <p className="space-x-2 my-2">
+          Area : <span>{area}</span>
+        </p>
         <div className="flex gap-2 flex-grow">
           <p>Facilites:</p>
           <div className="flex flex-wrap gap-2">
@@ -38,13 +41,10 @@ export const EstateCard = ({
             ))}
           </div>
         </div>
-        <p className="space-x-2 my-2">
-          Area : <span>{area}</span>
-        </p>
       </div>
       <div className="mt-4 mb-2 px-7">
         <div className="flex justify-between">
-          <p className="font-bold text-2xl">Price : {price}</p>
+          <p className="font-bold md:text-lg lg:text-xl">Price : {price}</p>
           <button
             onClick={handleViewDetails}
             className="btn min-h-4 h-10 bg-first"

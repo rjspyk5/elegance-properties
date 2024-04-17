@@ -4,10 +4,8 @@ export const Footer = () => {
     <footer className="footer footer-center py-10 bg-[#ffffff10] backdrop-blur-lg px-4 md:px-7   lg:px-11 mt-8 ">
       <aside>
         <img className="w-24" src={logo} alt="" />
-        <p className="font-bold">
-          Elegance Properties Ltd. <br />
-          Start providing reliable real state related services since 2024
-        </p>
+        <p className="font-bold">Elegance Properties Ltd.</p>
+        <p> Start providing reliable real state related services since 2024</p>
         <p>Copyright © 2024 - All right reserved</p>
       </aside>
       <nav>
