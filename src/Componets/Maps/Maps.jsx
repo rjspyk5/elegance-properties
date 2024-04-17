@@ -11,6 +11,7 @@ export const Maps = () => {
       maxZoom={20}
       attributionControl={true}
       zoomControl={true}
+      scrollWheelZoom={false}
       doubleClickZoom={true}
       dragging={true}
       animate={true}
