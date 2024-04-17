@@ -13,7 +13,6 @@ export const Home = () => {
       </Helmet>
       <div className="flex">
         <div>hellor</div>
-
         <Slider />
       </div>
 
