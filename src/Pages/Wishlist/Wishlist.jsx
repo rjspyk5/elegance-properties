@@ -22,7 +22,7 @@ export const Wishlist = () => {
     setorderedData(filteredData);
   };
   return (
-    <div>
+    <div className="animate__fadeIn animate__animated">
       <Helmet>
         <title>Elegance | Wishlist </title>
       </Helmet>

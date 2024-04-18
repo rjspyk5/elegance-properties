@@ -4,7 +4,7 @@ import { Maps } from "../Maps/Maps";
 export const GetInTouch = () => {
   return (
     <>
-      <div className="rounded-xl drop-shadow-xl backdrop-blur-md p-7 bg-[#ffffff09] ">
+      <div className="rounded-xl drop-shadow-xl backdrop-blur-md p-7 animate__fadeIn animate__animated bg-[#ffffff09] ">
         <div>
           <SectionHeadings
             heading="Contact With Us"

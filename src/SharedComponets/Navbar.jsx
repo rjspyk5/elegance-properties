@@ -85,7 +85,10 @@ export const Navbar = () => {
               {menu}
             </ul>
           </div>
-          <Link to="/" className="font-bold md:text-xl">
+          <Link
+            to="/"
+            className="font-bold md:text-xl animate__animated animate__swing"
+          >
             Elegance Properties
           </Link>
         </div>

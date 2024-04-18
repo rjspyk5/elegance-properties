@@ -26,14 +26,14 @@ export const UpdateProfile = () => {
   };
 
   return (
-    <div className="animate__fadeIn animate__animated">
+    <div className="">
       <Helmet>
         <title>Elegance | update profile</title>
       </Helmet>
       <div className="hero min-h-screen ">
         <div className="card   shadow-2xl  bg-base-100">
           <div className="hero-content grid grid-cols-1 md:grid-cols-2">
-            <div className="text-center flex flex-col justify-center items-center">
+            <div className="text-center flex flex-col justify-center items-center animate__animated animate__slow animate__backInLeft">
               <img
                 className="rounded-full w-56"
                 src={user.photoURL}
@@ -54,7 +54,7 @@ export const UpdateProfile = () => {
               )}
             </div>
             <div className="hero-content flex-col w-full">
-              <div className="shrink-0 w-full md:w-[500px]  bg-base-100">
+              <div className="shrink-0 w-full md:w-[500px]  bg-base-100 animate__animated animate__slow animate__backInRight">
                 <form className="card-body w-full " onSubmit={update}>
                   <div className="form-control">
                     <label className="label">
