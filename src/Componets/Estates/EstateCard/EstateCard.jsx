@@ -5,19 +5,23 @@ import PropTypes from "prop-types";
 import { setData } from "../../../assets/Localstorage";
 import { useContext } from "react";
 import { AuthContext } from "./../../../Provider/Provider";
-
+import Swal from "sweetalert2";
 export const EstateCard = ({
   estate: { id, image, estate_title, price, facilities, location, area },
 }) => {
   const navigate = useNavigate();
   const handleViewDetails = () => {
-    console.log("clicked");
     navigate(`/estate/${id}`);
   };
   const { user } = useContext(AuthContext);
 
   const handleAddToWishList = () => {
-    user ? setData(user.email, id) : navigate("/login");
+    if (user) {
+      setData(user.email, id);
+      Swal.fire("Added to wishlist successfully");
+    } else {
+      navigate("/login");
+    }
   };
   return (
     <div className="card hover:scale-[100.8%]   duration-300  bg-[#ffffff10]">
