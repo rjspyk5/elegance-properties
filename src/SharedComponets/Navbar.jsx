@@ -10,7 +10,9 @@ export const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "bg-first" : "")}
+          className={({ isActive }) =>
+            isActive ? "bg-first focus:bg-first" : ""
+          }
         >
           Home
         </NavLink>
@@ -19,7 +21,9 @@ export const Navbar = () => {
         <li>
           <NavLink
             to="/updateprofile"
-            className={({ isActive }) => (isActive ? "bg-first" : "")}
+            className={({ isActive }) =>
+              isActive ? "bg-first focus:bg-first" : ""
+            }
           >
             Update Profile
           </NavLink>
@@ -28,7 +32,9 @@ export const Navbar = () => {
       <li>
         <NavLink
           to="/viewprofile"
-          className={({ isActive }) => (isActive ? "bg-first" : "")}
+          className={({ isActive }) =>
+            isActive ? "bg-first focus:bg-first" : ""
+          }
         >
           User Profile
         </NavLink>

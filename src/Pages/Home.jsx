@@ -5,7 +5,9 @@ import { GetInTouch } from "./../Componets/GetInTouch/GetInTouch";
 import { FAQ } from "./../Componets/FAQ/FAQ";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import { useEffect } from "react";
+
 export const Home = () => {
   useEffect(() => {
     AOS.init();
