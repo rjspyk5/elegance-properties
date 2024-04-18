@@ -1,6 +1,7 @@
 import { IoLocation } from "react-icons/io5";
 import PropTypes from "prop-types";
-export const Iteam = ({ estate }) => {
+
+export const Iteam = ({ estate, handleRemoveData }) => {
   return (
     <div className="bg-[#ffffff14] rounded-xl p-4">
       <div className="flex flex-col lg:flex-row gap-5 ">
@@ -22,6 +23,12 @@ export const Iteam = ({ estate }) => {
             <span className="font-normal ">{estate.description}</span>
           </p>
           <p className="font-bold text-2xl">Price : {estate.price}</p>
+          <button
+            onClick={() => handleRemoveData(estate.id)}
+            className="mt-3 px-3 py-2 rounded-lg bg-[#b42a2a]"
+          >
+            Remove from wishlist
+          </button>
         </div>
       </div>
     </div>
@@ -29,4 +36,5 @@ export const Iteam = ({ estate }) => {
 };
 Iteam.propTypes = {
   estate: PropTypes.object,
+  handleRemoveData: PropTypes.func,
 };

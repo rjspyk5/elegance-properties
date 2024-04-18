@@ -17,8 +17,10 @@ export const EstateCard = ({
 
   const handleAddToWishList = () => {
     if (user) {
-      setData(user.email, id);
-      Swal.fire("Added to wishlist successfully");
+      const isDuplicate = setData(user.email, id);
+      !isDuplicate
+        ? Swal.fire("Added to wishlist successfully")
+        : Swal.fire("already added on wishlist");
     } else {
       navigate("/login");
     }

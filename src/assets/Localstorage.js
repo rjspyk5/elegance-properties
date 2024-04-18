@@ -4,11 +4,17 @@ export const getData = (key) => {
 
 export const setData = (key, data) => {
   const prevData = getData(key);
-  localStorage.setItem(key, JSON.stringify([...prevData, data]));
+  const duplicateCheck = prevData.find((el) => el === data);
+  if (duplicateCheck) {
+    return true;
+  } else {
+    localStorage.setItem(key, JSON.stringify([...prevData, data]));
+    return false;
+  }
 };
 
-export const removeData = (data) => {
-  const prevData = getData();
+export const removeData = (key, data) => {
+  const prevData = getData(key);
   const updateData = prevData.filter((el) => el !== data);
-  localStorage.setItem("estate", JSON.stringify(updateData));
+  localStorage.setItem(key, JSON.stringify(updateData));
 };
