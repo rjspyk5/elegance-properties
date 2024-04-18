@@ -14,7 +14,7 @@ Visit the live site: [Elegance Properties](https://elegance-properties.web.app)
 
 ## Used Packages
 
-- Swiper.js
+- Swiper slider
 - Animate.css
 - React Leaflet
-- AOS
+- AOS Package
