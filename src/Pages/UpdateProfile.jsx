@@ -26,7 +26,7 @@ export const UpdateProfile = () => {
   };
 
   return (
-    <div>
+    <div className="animate__fadeIn animate__animated">
       <Helmet>
         <title>Elegance | update profile</title>
       </Helmet>

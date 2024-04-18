@@ -7,17 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export const Register = () => {
   const { signUp } = useContext(AuthContext);
   const navigate = useNavigate();
   const [showPass, setshowPass] = useState(false);
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -70,12 +65,7 @@ export const Register = () => {
         theme="colored"
       />
       <div className="hero-content flex-col w-full">
-        <div
-          data-aos-anchor-placement="top-center"
-          data-aos-duration="3000"
-          data-aos="zoom-in"
-          className="card shrink-0 w-full md:w-[500px]  shadow-2xl  bg-base-100"
-        >
+        <div className="card animate__fadeIn animate__animated shrink-0 w-full md:w-[500px]  shadow-2xl  bg-base-100">
           <form className="card-body w-full " onSubmit={handleSubmit}>
             <h1 className="text-4xl font-bold text-first text-center">
               Registration Form
