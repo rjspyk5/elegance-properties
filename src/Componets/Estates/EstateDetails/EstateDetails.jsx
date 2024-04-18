@@ -34,8 +34,9 @@ export const EstateDetails = () => {
           Description:{" "}
           <span className="font-normal ">{estate.description}</span>
         </p>
-        <div className="flex gap-2 items-center flex-grow">
-          <p className="font-bold ">Facilites:</p>
+        <div className="flex gap-2  flex-grow">
+          <p className="font-bold text-lg ">Facilites:</p>
+
           <div className="flex flex-wrap gap-2">
             {estate.facilities.map((el, index) => (
               <span
@@ -48,7 +49,7 @@ export const EstateDetails = () => {
             ))}
           </div>
         </div>
-        <p className="space-x-2 my-2 font-bold">
+        <p className="space-x-2 my-2 font-bold text-lg">
           Area : <span className="font-normal">{estate.area}</span>
         </p>
         <p className="font-bold text-2xl">Price : {estate.price}</p>

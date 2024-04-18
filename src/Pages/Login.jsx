@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 
 export const Login = () => {
-  const { setuser, logIn, googleSignUp, githubSignUp } =
+  const { setuser, logIn, googleSignUp, githubSignUp, setloading } =
     useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();

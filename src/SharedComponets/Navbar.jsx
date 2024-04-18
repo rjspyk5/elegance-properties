@@ -36,11 +36,15 @@ export const Navbar = () => {
     </>
   );
   return (
-    <div className="bg-[#ffffff1e] px-4 md:px-7 shadow-2xl shadow-[#ffffff1e] lg:px-11">
+    <div className="bg-[#ffffff1e]  shadow-2xl shadow-[#ffffff1e] lg:px-11">
       <div className="navbar">
         <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div className="dropdown ">
+            <div
+              tabIndex={0}
+              role="button"
+              className=" px-1 md:pr-4 btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -63,7 +67,9 @@ export const Navbar = () => {
               {menu}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Elegance Properties</a>
+          <Link to="/" className="font-bold md:text-xl">
+            Elegance Properties
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{menu}</ul>
@@ -78,20 +84,26 @@ export const Navbar = () => {
                 }`}
               >
                 <img
-                  className="w-10 rounded-full avatar"
+                  className="md:w-10 w-8 rounded-full avatar"
                   src={user.photoURL}
                   alt="not available"
                 />
               </div>
 
-              <button onClick={logOut} className="btn h-10 bg-second  min-h-4">
+              <button
+                onClick={logOut}
+                className="btn h-9 px-4 md:px-5 md:h-10 bg-second  min-h-4"
+              >
                 Logout
               </button>
             </div>
           ) : loading ? (
             <span className="loading loading-spinner text-info"></span>
           ) : (
-            <Link to="/login" className="btn h-10 bg-second  min-h-4">
+            <Link
+              to="/login"
+              className="btn h-9 px-4 md:px-5 md:h-10 bg-second  min-h-4"
+            >
               Login
             </Link>
           )}
