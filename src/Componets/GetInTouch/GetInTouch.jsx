@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { ContactForm } from "./ContactForm";
 import { SectionHeadings } from "../../SharedComponets/SectionHeadings";
 import { Maps } from "../Maps/Maps";

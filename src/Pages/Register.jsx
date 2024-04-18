@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -44,7 +44,6 @@ export const Register = () => {
       .catch((err) => errorToast(err));
   };
 
-  const successToast = (msz) => toast.success(msz);
   const errorToast = (msz) => toast.error(`${msz}`);
 
   return (

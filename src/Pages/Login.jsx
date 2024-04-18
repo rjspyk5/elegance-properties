@@ -1,4 +1,4 @@
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
@@ -9,8 +9,7 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 
 export const Login = () => {
-  const { setuser, logIn, googleSignUp, githubSignUp, setloading } =
-    useContext(AuthContext);
+  const { logIn, googleSignUp, githubSignUp } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -34,7 +33,6 @@ export const Login = () => {
       });
   };
 
-  const successToast = (msz) => toast.success(msz);
   const errorToast = (msz) => toast.error(`${msz}`);
   return (
     <div className="hero min-h-screen bg-base-200">

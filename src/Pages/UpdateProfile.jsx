@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { auth } from "../Firebase/firebase.config";
+
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/Provider";
 import Swal from "sweetalert2";

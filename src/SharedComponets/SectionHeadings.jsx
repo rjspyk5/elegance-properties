@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -20,4 +20,8 @@ export const SectionHeadings = ({ heading, subheading }) => {
       </p>
     </div>
   );
+};
+SectionHeadings.propTypes = {
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
 };

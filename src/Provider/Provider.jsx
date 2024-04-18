@@ -10,7 +10,7 @@ import {
   GithubAuthProvider,
   updateProfile,
 } from "firebase/auth";
-
+import PropTypes from "prop-types";
 export const AuthContext = createContext();
 
 export const Provider = ({ children }) => {
@@ -73,4 +73,7 @@ export const Provider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+};
+Provider.propTypes = {
+  children: PropTypes.node,
 };

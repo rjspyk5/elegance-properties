@@ -3,8 +3,6 @@ export const ContactForm = () => {
     <div className="w-full ">
       <form>
         <fieldset className=" flex flex-col gap-4 *:w-full *:rounded-md">
-          {/* name and email */}
-
           <div className="flex gap-4 *:rounded-md *:focus:ring-c-sucess">
             <input
               type="text"
@@ -19,13 +17,13 @@ export const ContactForm = () => {
               placeholder="Enter your email"
             />
           </div>
-          {/* number */}
+
           <input
             className="p-2"
             type="number"
             placeholder="Enter your number"
           />
-          {/* textarea */}
+
           <textarea
             name=""
             id=""

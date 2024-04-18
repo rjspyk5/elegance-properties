@@ -1,7 +1,7 @@
-import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IoLocation } from "react-icons/io5";
 import "animate.css";
+import PropTypes from "prop-types";
 
 export const EstateCard = ({
   estate: { id, image, estate_title, price, facilities, location, area },
@@ -55,4 +55,8 @@ export const EstateCard = ({
       </div>
     </div>
   );
+};
+
+EstateCard.propTypes = {
+  estate: PropTypes.object,
 };
