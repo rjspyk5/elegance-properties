@@ -6,11 +6,10 @@ import { Login } from "../Pages/Login";
 import { Register } from "../Pages/Register";
 import { PrivateRoute } from "../Layout/PrivateRoute";
 import { UpdateProfile } from "../Pages/UpdateProfile";
-
 import { EstateDetails } from "../Componets/Estates/EstateDetails/EstateDetails";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { GetInTouch } from "../Componets/GetInTouch/GetInTouch";
-import { Cart } from "../Pages/Cart/Cart";
+import { Wishlist } from "../Pages/Wishlist/Wishlist";
 
 export const routes = createBrowserRouter([
   {
@@ -31,10 +30,10 @@ export const routes = createBrowserRouter([
         loader: () => axios.get("/Properties.json"),
       },
       {
-        path: "/cart",
+        path: "/wishlist",
         element: (
           <PrivateRoute>
-            <Cart />
+            <Wishlist />
           </PrivateRoute>
         ),
         loader: () => axios.get("/Properties.json"),

@@ -32,12 +32,12 @@ export const Navbar = () => {
       {user && (
         <li>
           <NavLink
-            to="/cart"
+            to="/wishlist"
             className={({ isActive }) =>
               isActive ? "bg-first focus:bg-first" : ""
             }
           >
-            Cart
+            Wishlist
           </NavLink>
         </li>
       )}

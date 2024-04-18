@@ -1,9 +1,16 @@
 import { IoLocation } from "react-icons/io5";
+import PropTypes from "prop-types";
 export const Iteam = ({ estate }) => {
   return (
-    <div>
-      <div className="flex">
-        <img className="w-56" src={estate.image} alt="" />
+    <div className="bg-[#ffffff14] rounded-xl p-4">
+      <div className="flex flex-col lg:flex-row gap-5 ">
+        <figure>
+          <img
+            className="w-full lg:w-96 rounded-lg"
+            src={estate.image}
+            alt=""
+          />{" "}
+        </figure>
         <div>
           <h1 className="font-bold text-4xl">{estate.estate_title}</h1>
           <p> {estate.segment_name}</p>
@@ -14,8 +21,12 @@ export const Iteam = ({ estate }) => {
             Description:{" "}
             <span className="font-normal ">{estate.description}</span>
           </p>
+          <p className="font-bold text-2xl">Price : {estate.price}</p>
         </div>
       </div>
     </div>
   );
+};
+Iteam.propTypes = {
+  estate: PropTypes.object,
 };

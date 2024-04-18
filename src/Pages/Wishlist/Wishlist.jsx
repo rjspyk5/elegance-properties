@@ -3,8 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import { getData } from "../../assets/Localstorage";
 import { AuthContext } from "../../Provider/Provider";
+import { Iteam } from "./Iteam";
 
-export const Cart = () => {
+export const Wishlist = () => {
   const alldata = useLoaderData();
   const { user } = useContext(AuthContext);
   const [orderedData, setorderedData] = useState([]);
@@ -16,41 +17,22 @@ export const Cart = () => {
     setorderedData(filteredData);
     console.log(filteredData);
   }, [alldata]);
-  console.log(orderedData);
+
   return (
     <div>
       <Helmet>
-        <title>Elegance | Cart</title>
+        <title>Elegance | Wishlist </title>
       </Helmet>
-      <h1 className="text-center font-bold text-3xl my-10">Order List</h1>
+      <h1 className="text-center font-bold text-3xl my-10">WishList</h1>
       {orderedData.length > 1 ? (
-        <div className="bg-[#ffffff14] ">
-          {" "}
-          <div className="overflow-x-auto">
-            <table className="table">
-              {/* head */}
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {orderedData.map((el) => (
-                  <>
-                    <tr>
-                      <td>{el.estate_title}</td>
-                      <td>{el.price}</td>
-                    </tr>
-                  </>
-                ))}
-              </tbody>
-            </table>
-          </div>
+        <div className=" space-y-4">
+          {orderedData.map((el, idx) => (
+            <Iteam key={idx} estate={el} />
+          ))}
         </div>
       ) : (
         <h1 className="text-center text-lg min-h-56 flex items-center justify-center">
-          Your order list is empty
+          Your wishlist is empty
         </h1>
       )}
     </div>

@@ -48,13 +48,13 @@ export const EstateCard = ({
             ))}
           </div>
         </div>
+        <p className="font-bold md:text-lg lg:text-xl my-4">Price : {price}</p>
       </div>
-      <div className="mt-4 mb-2 px-7">
+      <div className=" mb-5 px-7">
         <div className="flex justify-between">
-          <p className="font-bold md:text-lg lg:text-xl">Price : {price}</p>
           <button
             onClick={handleAddToWishList}
-            className="btn min-h-4 h-10 bg-first"
+            className="btn min-h-4 h-10 bg-[#ad7f28]"
           >
             Add to wishlist
           </button>
