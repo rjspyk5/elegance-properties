@@ -8,7 +8,7 @@ import { PrivateRoute } from "../Layout/PrivateRoute";
 import { UpdateProfile } from "../Pages/UpdateProfile";
 
 import { EstateDetails } from "../Componets/Estates/EstateDetails/EstateDetails";
-import axios from "axios";
+import axios, { Axios } from "axios";
 import { GetInTouch } from "../Componets/GetInTouch/GetInTouch";
 import { Cart } from "../Pages/Cart/Cart";
 
@@ -37,6 +37,7 @@ export const routes = createBrowserRouter([
             <Cart />
           </PrivateRoute>
         ),
+        loader: () => axios.get("/Properties.json"),
       },
       {
         path: "/updateprofile",

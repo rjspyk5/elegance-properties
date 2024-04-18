@@ -2,6 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { IoLocation } from "react-icons/io5";
 import "animate.css";
 import PropTypes from "prop-types";
+import { setData } from "../../../assets/Localstorage";
+import { useContext } from "react";
+import { AuthContext } from "./../../../Provider/Provider";
 
 export const EstateCard = ({
   estate: { id, image, estate_title, price, facilities, location, area },
@@ -11,7 +14,11 @@ export const EstateCard = ({
     console.log("clicked");
     navigate(`/estate/${id}`);
   };
+  const { user } = useContext(AuthContext);
 
+  const handleAddToWishList = () => {
+    user ? setData(user.email, id) : navigate("/login");
+  };
   return (
     <div className="card hover:scale-[100.8%]   duration-300  bg-[#ffffff10]">
       <figure>
@@ -45,6 +52,12 @@ export const EstateCard = ({
       <div className="mt-4 mb-2 px-7">
         <div className="flex justify-between">
           <p className="font-bold md:text-lg lg:text-xl">Price : {price}</p>
+          <button
+            onClick={handleAddToWishList}
+            className="btn min-h-4 h-10 bg-first"
+          >
+            Add to wishlist
+          </button>
           <button
             onClick={handleViewDetails}
             className="btn min-h-4 h-10 bg-first"
