@@ -18,7 +18,7 @@ export const Estates = () => {
         />
       </div>
 
-      <hr className="text-[#ffffff3b]" />
+      <hr className="text-[#ffffff3b] my-4" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         {estatesData &&
           estatesData.map((el) => <EstateCard estate={el} key={el.id} />)}

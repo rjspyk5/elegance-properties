@@ -1,23 +1,11 @@
-import { useEffect } from "react";
 import { ContactForm } from "./ContactForm";
 import { SectionHeadings } from "../../SharedComponets/SectionHeadings";
 import { Maps } from "../Maps/Maps";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 export const GetInTouch = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
   return (
     <>
       <div className="rounded-xl drop-shadow-xl backdrop-blur-md p-7 bg-[#ffffff09] ">
-        <div
-          data-aos-easing="linear"
-          data-aos-duration="2000"
-          data-aos="zoom-out"
-        >
+        <div>
           <SectionHeadings
             heading="Contact With Us"
             subheading="Contact us today to schedule a viewing or inquire about our luxury properties. Our team of experts is ready to assist you in finding your dream home or investment opportunity."
