@@ -36,9 +36,6 @@ export const EstateCard = ({
         newestOnTop
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
         theme="colored"
       />
       <figure>
