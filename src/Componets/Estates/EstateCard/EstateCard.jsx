@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 import { setData } from "../../../assets/Localstorage";
 import { useContext } from "react";
 import { AuthContext } from "./../../../Provider/Provider";
-import Swal from "sweetalert2";
+
+import { ToastContainer, toast } from "react-toastify";
 export const EstateCard = ({
   estate: { id, image, estate_title, price, facilities, location, area },
 }) => {
@@ -14,19 +15,32 @@ export const EstateCard = ({
     navigate(`/estate/${id}`);
   };
   const { user } = useContext(AuthContext);
-
+  const errorToast = (msz) => toast.error(`${msz}`);
+  const successToast = (msz) => toast.success(`${msz}`);
   const handleAddToWishList = () => {
     if (user) {
       const isDuplicate = setData(user.email, id);
       !isDuplicate
-        ? Swal.fire("Added to wishlist successfully")
-        : Swal.fire("already added on wishlist");
+        ? successToast("Successfully added on wishlist")
+        : errorToast("Already added in wishlist");
     } else {
       navigate("/login");
     }
   };
   return (
     <div className="card hover:scale-[100.8%]   duration-300  bg-[#ffffff10]">
+      <ToastContainer
+        position="top-center"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <figure>
         <img src={image} className="h-[290px]" alt="car!" />
       </figure>
