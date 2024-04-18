@@ -30,7 +30,7 @@ export const UpdateProfile = () => {
       <Helmet>
         <title>Elegance | update profile</title>
       </Helmet>
-      <div className="hero min-h-screen ">
+      <div className="hero ">
         <div className="card   shadow-2xl  bg-base-100">
           <div className="hero-content grid grid-cols-1 md:grid-cols-2">
             <div className="text-center flex flex-col justify-center items-center animate__animated animate__slow animate__backInLeft">
