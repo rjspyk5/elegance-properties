@@ -29,20 +29,32 @@ export const Navbar = () => {
           </NavLink>
         </li>
       )}
+      {user && (
+        <li>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              isActive ? "bg-first focus:bg-first" : ""
+            }
+          >
+            Cart
+          </NavLink>
+        </li>
+      )}
       <li>
         <NavLink
-          to="/viewprofile"
+          to="/contact"
           className={({ isActive }) =>
             isActive ? "bg-first focus:bg-first" : ""
           }
         >
-          User Profile
+          Contact
         </NavLink>
       </li>
     </>
   );
   return (
-    <div className="bg-[#ffffff1e]  shadow-2xl shadow-[#ffffff1e] lg:px-11">
+    <div className="bg-[#ffffff1e]  shadow-2xl lg:px-11">
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown ">

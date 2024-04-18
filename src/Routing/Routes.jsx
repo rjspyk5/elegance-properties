@@ -6,9 +6,11 @@ import { Login } from "../Pages/Login";
 import { Register } from "../Pages/Register";
 import { PrivateRoute } from "../Layout/PrivateRoute";
 import { UpdateProfile } from "../Pages/UpdateProfile";
-import { Profile } from "../Pages/Profile";
+
 import { EstateDetails } from "../Componets/Estates/EstateDetails/EstateDetails";
 import axios from "axios";
+import { GetInTouch } from "../Componets/GetInTouch/GetInTouch";
+import { Cart } from "../Pages/Cart/Cart";
 
 export const routes = createBrowserRouter([
   {
@@ -29,10 +31,10 @@ export const routes = createBrowserRouter([
         loader: () => axios.get("/Properties.json"),
       },
       {
-        path: "/viewprofile",
+        path: "/cart",
         element: (
           <PrivateRoute>
-            <Profile />
+            <Cart />
           </PrivateRoute>
         ),
       },
@@ -43,6 +45,10 @@ export const routes = createBrowserRouter([
             <UpdateProfile />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/contact",
+        element: <GetInTouch />,
       },
     ],
   },
