@@ -1,19 +1,24 @@
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Login = () => {
   const { setuser, logIn, googleSignUp, githubSignUp, setloading } =
     useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -53,8 +58,13 @@ export const Login = () => {
         pauseOnHover
         theme="colored"
       />
-      <div className="hero-content flex-col w-full">
-        <div className="card shrink-0 w-full md:w-[500px]  shadow-2xl  bg-base-100">
+      <div className="hero-content flex-col w-full ">
+        <div
+          data-aos-anchor-placement="top-center"
+          data-aos-duration="2000"
+          data-aos="zoom-out"
+          className="card shrink-0 w-full md:w-[500px]  shadow-2xl  bg-base-100"
+        >
           <form className="card-body w-full " onSubmit={handleSubmit}>
             <h1 className="text-4xl font-bold text-first text-center">
               Login Form

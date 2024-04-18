@@ -90,7 +90,7 @@ export const Navbar = () => {
                 }`}
               >
                 <img
-                  className="md:w-10 w-8 rounded-full avatar"
+                  className="md:w-10 w-8 rounded-full avatar animate__animated animate__jackInTheBox"
                   src={user.photoURL}
                   alt="not available"
                 />
@@ -98,7 +98,7 @@ export const Navbar = () => {
 
               <button
                 onClick={logOut}
-                className="btn h-9 px-4 md:px-5 md:h-10 bg-second  min-h-4"
+                className="btn h-9 px-4 md:px-5 md:h-10 bg-second  min-h-4 animate__animated animate__bounce "
               >
                 Logout
               </button>
@@ -108,7 +108,7 @@ export const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn h-9 px-4 md:px-5 md:h-10 bg-second  min-h-4"
+              className="btn h-9 px-4 md:px-5 md:h-10 bg-second  min-h-4 animate__animated animate__bounce "
             >
               Login
             </Link>

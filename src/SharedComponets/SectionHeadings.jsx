@@ -8,7 +8,12 @@ export const SectionHeadings = ({ heading, subheading }) => {
     AOS.refresh();
   }, []);
   return (
-    <div data-aos="zoom-in" className="space-y-3 my-5 ">
+    <div
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+      data-aos="zoom-out"
+      className="space-y-3 my-5 "
+    >
       <h1 className="text-center text-2xl md:text-4xl font-bold">{heading}</h1>
       <p className="text-center text-[#ffffff77] font-light w-4/5 mx-auto">
         {subheading}

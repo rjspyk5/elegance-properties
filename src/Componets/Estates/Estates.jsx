@@ -10,7 +10,7 @@ export const Estates = () => {
   }, []);
 
   return (
-    <div className="pt-7 animate__animated animate__fadeInUp">
+    <div className="pt-7 ">
       <div>
         <SectionHeadings
           heading="Exclusive Estates"

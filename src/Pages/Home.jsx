@@ -18,7 +18,7 @@ export const Home = () => {
       <Helmet>
         <title>Elegance | Home</title>
       </Helmet>
-      <div className="my-8 animate__animated animate__fadeIn animate__slower relative">
+      <div className="my-8  animate__animated animate__fadeIn animate__slower relative">
         <Slider />
       </div>
       <Estates />
