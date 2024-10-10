@@ -12,7 +12,7 @@ Visit the live site: [Elegance Properties](https://elegance-properties.web.app)
 - Responsive design ensuring optimal viewing experience across all devices.
 - Interactive property listings with high-quality images, detailed descriptions, and key features.
 
-## Used Packages
+## Used Package
 
 - Swiper slider
 - Animate.css
