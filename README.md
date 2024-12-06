@@ -1,6 +1,6 @@
 # Elegance Properties
 
-Welcome to Elegance Properties.
+Welcome to Elegance Properties of bangladesh
 
 Visit the live site: [Elegance Properties](https://elegance-properties.web.app)
 
